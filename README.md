@@ -50,9 +50,9 @@ Video:  [https://youtube.com/shorts/Vs5GTLbts8o](https://youtube.com/shorts/Vs5G
         * n_grid_20: [https://youtube.com/shorts/jKy5TqeSm0U](https://youtube.com/shorts/jKy5TqeSm0U)
     * PSNR
         * n_grid_100 vs n_grid_50  
-            ![PSNR](figures\wolf_ngrid100_vs_ngrid50.png)
+            ![PSNR](figures/wolf_ngrid100_vs_ngrid50.png)
         * n_grid_100 vs n_grid_20  
-            ![PSNR](figures\wolf_ngrid100_vs_ngrid20.png)
+            ![PSNR](figures/wolf_ngrid100_vs_ngrid20.png)
 * Pillow  
     * Videos
         * n_grid_100: [https://youtube.com/shorts/Vs5GTLbts8o](https://youtube.com/shorts/Vs5GTLbts8o)
@@ -60,9 +60,9 @@ Video:  [https://youtube.com/shorts/Vs5GTLbts8o](https://youtube.com/shorts/Vs5G
         * n_grid_20: [https://youtube.com/shorts/ZdFrZA27hx8](https://youtube.com/shorts/ZdFrZA27hx8)
     * PSNR
         * n_grid_100 vs n_grid_50
-            ![PSNR](figures\pillow_ngrid100_vs_ngrid50.png)
+            ![PSNR](figures/pillow_ngrid100_vs_ngrid50.png)
         * n_grid_100 vs n_grid_20  
-            ![PSNR](figures\pillow_ngrid100_vs_ngrid20.png)
+            ![PSNR](figures/pillow_ngrid100_vs_ngrid20.png)
 * Discussion
     * n_grid determines the spatial resolution of physics simulations within the MPM system. The MPM space is subdivided into n_grid × n_grid × n_grid grids, directly influencing the level of detail in the simulation. It follows a particle → grid → particle process to accurately model the physics of each particle.
     * As shown in the video, a higher n_grid value results in a more detailed simulation, bringing it closer to reality.
@@ -75,9 +75,9 @@ Video:  [https://youtube.com/shorts/Vs5GTLbts8o](https://youtube.com/shorts/Vs5G
         * substep_dt 1e-4: [https://youtube.com/shorts/kko90wwQx7w](https://youtube.com/shorts/kko90wwQx7w)
     * PSNR
         * substep_dt 2e-5 vs substep_dt 8e-5  
-            ![PSNR](figures\wolf_substep2e-5_vs_substep8e-5.png)
+            ![PSNR](figures/wolf_substep2e-5_vs_substep8e-5.png)
         * substep_dt 2e-5 vs substep_dt 1e-4 
-            ![PSNR](figures\wolf_substep2e-5_vs_substep1e-4.png)
+            ![PSNR](figures/wolf_substep2e-5_vs_substep1e-4.png)
 * Pillow  
     * Videos
         * substep_dt 2e-5: [https://youtube.com/shorts/Vs5GTLbts8o](https://youtube.com/shorts/Vs5GTLbts8o)
@@ -85,9 +85,9 @@ Video:  [https://youtube.com/shorts/Vs5GTLbts8o](https://youtube.com/shorts/Vs5G
         * substep_dt 1e-4: [https://youtube.com/shorts/vE61x_Vtsvg](https://youtube.com/shorts/vE61x_Vtsvg)
     * PSNR
         * substep_dt 2e-5 vs substep_dt 5e-5  
-            ![PSNR](figures\pillow_substep2e-5_vs_substep5e-5.png)
+            ![PSNR](figures/pillow_substep2e-5_vs_substep5e-5.png)
         * substep_dt 2e-5 vs substep_dt 1e-4 
-            ![PSNR](figures\pillow_substep2e-5_vs_substep1e-4.png)
+            ![PSNR](figures/pillow_substep2e-5_vs_substep1e-4.png)
 * Discussion
     * substep_dt determines the temporal resolution of physics simulations within the MPM system. The MPM space will update the physics every substep_dt seconds.
     * If there are some physics parameters with large value, such as Young's Module E with value 1e9, we should set the substep_dt to a smaller value, or the computation along the way may exceed the float limits and causing an overflow.
@@ -101,9 +101,9 @@ Video:  [https://youtube.com/shorts/Vs5GTLbts8o](https://youtube.com/shorts/Vs5G
         * grid_v_damping 0.7: [https://youtube.com/shorts/zn95FT82qvA](https://youtube.com/shorts/zn95FT82qvA)
     * PSNR
         * grid_v_damping_1.0 vs grid_v_damping_0.9  
-            ![PSNR](figures\wolf_vdamping0.9_vs_vdamping1.0.png)
+            ![PSNR](figures/wolf_vdamping0.9_vs_vdamping1.0.png)
         * grid_v_damping_0.9 vs grid_v_damping_0.7
-            ![PSNR](figures\wolf_vdamping0.9_vs_vdamping0.7.png)
+            ![PSNR](figures/wolf_vdamping0.9_vs_vdamping0.7.png)
 * Pillow  
     * Videos
         * grid_v_damping 1.0: [https://youtube.com/shorts/Vs5GTLbts8o](https://youtube.com/shorts/Vs5GTLbts8o)
@@ -111,9 +111,9 @@ Video:  [https://youtube.com/shorts/Vs5GTLbts8o](https://youtube.com/shorts/Vs5G
         * grid_v_damping 0.7: [https://youtube.com/shorts/3X7TlmouEgo](https://youtube.com/shorts/3X7TlmouEgo)
     * PSNR
         * grid_v_damping_1.0 vs grid_v_damping_0.9  
-            ![PSNR](figures\pillow_vdamping0.9_vs_vdamping1.0.png)
+            ![PSNR](figures/pillow_vdamping0.9_vs_vdamping1.0.png)
         * grid_v_damping_0.9 vs grid_v_damping_0.7
-            ![PSNR](figures\pillow_vdamping0.7_vs_vdamping0.9.png)
+            ![PSNR](figures/pillow_vdamping0.7_vs_vdamping0.9.png)
 * Discussion
     * grid_v_damping_scale is used to simulate kinetic energy loss caused by air resistance or friction.
     * The grid_v_damping_scale value ranges from 0 to 1, where smaller values indicate greater energy dissipation. A lower value represents a high-friction or strong-resistance environment, causing particles to settle quickly.
@@ -129,9 +129,9 @@ Video:  [https://youtube.com/shorts/Vs5GTLbts8o](https://youtube.com/shorts/Vs5G
         * softening_2.0: [https://youtube.com/shorts/tHCIgO-dA_M](https://youtube.com/shorts/tHCIgO-dA_M)
     * PSNR
         * softening_0.1 vs softening_0.5
-            ![PSNR](figures\pilloe_softening0.1_vs_softening0.5.png)
+            ![PSNR](figures/pillow_softening0.1_vs_softening0.5.png)
         * softening_0.1 vs softening_2.0  
-            ![PSNR](figures\pilloe_softening0.1_vs_softening2.0.png)
+            ![PSNR](figures/pillow_softening0.1_vs_softening2.0.png)
 * Discussion
     * Softening is used to simulate the behavior of elastic materials after undergoing irreversible shear or tensile deformation. As the internal structure is damaged, its strength weakens, making the material more prone to further deformation.
     * In PhysGaussian, when using softening, hardening must be set to 1.

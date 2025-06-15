@@ -1,0 +1,89 @@
+{
+    "opacity_threshold": 0.2,
+    "rotation_degree": [],
+    "rotation_axis": [],
+    "substep_dt": 2e-5,
+    "frame_dt": 2e-2,
+    "frame_num": 200,
+    "E": 1e4,
+    "nu": 0.3,
+    "n_grid": 100,
+    "material": "foam",
+    "density": 2000,
+    "grid_v_damping_scale": 0.7,
+    "yield_stress": 50,
+    "plastic_viscosity":20,
+    "softening": 0.1,
+    "hardening": 1,
+    "g": [
+        0.0,
+        0,
+        -5.0
+    ],
+    "sim_area": [
+        -0.65,
+        0.65,
+        -0.6,
+        0.6,
+        -1,
+        1
+    ],
+    "particle_filling": {
+        "n_grid": 80,
+        "density_threshold": 40.0,
+        "search_threshold": 0.5,
+        "search_exclude_direction": 5,
+        "ray_cast_direction": 0,
+        "max_particles_num": 2000000,
+        "max_partciels_per_cell": 4,
+        "boundary": [
+            0.6,
+            1.4,
+            0.6,
+            1.4,
+            0.92,
+            1.72
+        ]
+    },
+    "boundary_conditions": [
+        {
+            "type": "bounding_box"
+        },
+        {
+            "type": "surface_collider",
+            "point": [
+                1,
+                1,
+                0.6
+            ],
+            "normal": [
+                0.0,
+                0.0,
+                1.0
+            ],
+            "surface": "slip",
+            "friction": 0.1,
+            "start_time": 0,
+            "end_time": 1e3
+        }
+    ],
+    "mpm_space_vertical_upward_axis": [
+        0,
+        0,
+        1
+    ],
+    "mpm_space_viewpoint_center": [
+        1,
+        1,
+        1
+    ],
+    "default_camera_index": -1,
+    "show_hint": false,
+    "init_azimuthm": -90.0,
+    "init_elevation": 30.0,
+    "init_radius": 3.0,
+    "move_camera": true,
+    "delta_a": 0.5,
+    "delta_e": 0.0,
+    "delta_r": 0.0
+}
